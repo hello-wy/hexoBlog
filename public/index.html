@@ -1,0 +1,399 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>wuyBlog</title><meta name="keywords" content="java,python,opencv,autojs"><meta name="author" content="wuy"><meta name="copyright" content="wuy"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="分享一些学习java开发、人工智能等文章">
+<meta property="og:type" content="website">
+<meta property="og:title" content="wuyBlog">
+<meta property="og:url" content="http://120.55.75.103/index.html">
+<meta property="og:site_name" content="wuyBlog">
+<meta property="og:description" content="分享一些学习java开发、人工智能等文章">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2022/06/23/aNPncJ4rmxAy8SZ.jpg">
+<meta property="article:author" content="wuy">
+<meta property="article:tag" content="java,python,opencv,autojs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/06/23/aNPncJ4rmxAy8SZ.jpg"><link rel="shortcut icon" href="/img/logo.ico"><link rel="canonical" href="http://120.55.75.103/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":20,"languages":{"author":"作者: wuy","link":"链接: ","source":"来源: wuyBlog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'wuyBlog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-08-25 18:17:59'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://s2.loli.net/2022/06/23/aNPncJ4rmxAy8SZ.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa-solid fa-timeline"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://w.wallhaven.cc/full/z8/wallhaven-z8dg9y.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">wuyBlog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa-solid fa-timeline"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">wuyBlog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/hello-wy" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2281137167@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2022/06/24/gmall%E6%96%87%E6%A1%A3/mybatis-plus%20%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4/" title="无题"><img class="post_bg" src="https://images.unsplash.com/photo-1649133816831-de3d91d25288?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/06/24/gmall%E6%96%87%E6%A1%A3/mybatis-plus%20%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4/" title="无题">无题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2022-06-24T07:24:25.446Z" title="更新于 2022-06-24 15:24:25">2022-06-24</time></span></div><div class="content">配置全局逻辑删除在application.yml中配置
+1234567mybatis-plus:  mapper-locations: classpath:/mapper/**/*.xml  global-config:    db-config:      id-type: auto      logic-delete-value: 1		#主要设置这里，如果你是默认的，那么可以不用配置，      logic-not-delete-value: 0 
+
+
+
+在实体类中配置找到具体字段使用注解@TableLogic
+123456/** * 是否显示[0-不显示，1显示] * value 是逻辑未删除值， deval是逻辑删除值 */@TableLogic(value = &quot;1&quot;,delval = &quot;0&quot;)private Integer showStatus;
+
+
+
+
+
+使用调用deleteBatchIds，批量逻辑删除元祖
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2016/01/01/hello-world/" title="hello-world"><img class="post_bg" src="https://images.unsplash.com/photo-1649133816831-de3d91d25288?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hello-world"></a></div><div class="recent-post-info"><a class="article-title" href="/2016/01/01/hello-world/" title="hello-world">hello-world</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2022-07-02T08:36:41.424Z" title="更新于 2022-07-02 16:36:41">2022-07-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/LeetCode%E7%A0%B4%E5%B1%80%E6%94%BB%E7%95%A5/">LeetCode破局攻略</a></span></div><div class="content">
+title: Hello Worldcover: https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kZXxlbnwwfHwwfHw%3D&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60
+
+Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+
+More info: Writing
+Run server1$  ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2016/01/01/testPost/" title="testPost"><img class="post_bg" src="https://images.unsplash.com/photo-1571061614252-b045689850f4?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=387&amp;q=80" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="testPost"></a></div><div class="recent-post-info"><a class="article-title" href="/2016/01/01/testPost/" title="testPost">testPost</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2022-07-02T08:36:41.453Z" title="更新于 2022-07-02 16:36:41">2022-07-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/LeetCode%E7%A0%B4%E5%B1%80%E6%94%BB%E7%95%A5/">LeetCode破局攻略</a></span></div><div class="content">
+title: testPostcomments: truecopyright: truecopyright_author: wuycopyright_author_href: ‘https://xxxxxx.com&#39;copyright_info: 此文章版权归wuy所有，如有转载，请註明来自原作者date: 2022-06-24 15:18:50tags:
+
+测试
+验证categories:keywords:description:top_img:cover:toc:toc_number:toc_style_simple:katex:aplayer:highlight_shrink:
+
+
+l
+测试文章我也不知道说些什么,反正就是恒开心.
+
+引用块,不知道有没有用
+
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2016/01/01/gmall%E6%96%87%E6%A1%A3/JSR303%E6%A0%A1%E9%AA%8C/" title="JSR303校验"><img class="post_bg" src="https://img2.wallspic.com/crops/9/1/8/8/6/168819/168819-chao_ji_pao_che-pao_che-lun_tai-che_deng-1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JSR303校验"></a></div><div class="recent-post-info"><a class="article-title" href="/2016/01/01/gmall%E6%96%87%E6%A1%A3/JSR303%E6%A0%A1%E9%AA%8C/" title="JSR303校验">JSR303校验</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2022-07-02T08:37:06.230Z" title="更新于 2022-07-02 16:37:06">2022-07-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/LeetCode%E7%A0%B4%E5%B1%80%E6%94%BB%E7%95%A5/">LeetCode破局攻略</a></span></div><div class="content">简介后端开启校验在实体类中使用注解@NotNull、@NotBlank之类的这些类都在javax.validation.constraints包下
+访问方法:双击shift进行搜索方法.
+所有的校验注解在validationMessages_zh_cn.peoperties这个是中文注解
+然后在controller对应的entity传参数中添加@valid开启校验功能。
+@valid和@validation区别@valid是一个标准没有分组功能，@validation具有分组功能。
+使用步骤
+引入springboot-starter-validation包
+给bean字段添加验证注解
+开启校验@valid或者@validated,开启之后会有一个默认的响应
+通过一个统一的异常处理类进行捕获所有验证异常的异常。使用@controllerAdvice
+分组校验使用@validated(必须使用)在controller传参数之前。
+
+统一的异常处理  @controllerAdvice+@exceptHandler通过抽取异常处理,进行统一的管理.
+针对特定的错误进行集中处理12345678 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2016/01/01/gmall%E6%96%87%E6%A1%A3/%E4%B8%89%E7%BA%A7%E8%8F%9C%E5%8D%95/" title="三级菜单"><img class="post_bg" src="https://images.unsplash.com/photo-1653046641850-f8d2222ac839?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=387&amp;q=80" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="三级菜单"></a></div><div class="recent-post-info"><a class="article-title" href="/2016/01/01/gmall%E6%96%87%E6%A1%A3/%E4%B8%89%E7%BA%A7%E8%8F%9C%E5%8D%95/" title="三级菜单">三级菜单</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2022-07-02T08:37:06.264Z" title="更新于 2022-07-02 16:37:06">2022-07-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/LeetCode%E7%A0%B4%E5%B1%80%E6%94%BB%E7%95%A5/">LeetCode破局攻略</a></span></div><div class="content">三级菜单
+主要亮点是：使用了流来处理对象列表，比较的巧妙。
+
+编写接口(controller)递归调用获取子菜单思路使用流处理，不需要关注数据的类型，是一个通用的模版。
+
+获取所有的菜单信息
+将菜单信息转化成流，过滤出一级菜单（parent=0）
+使用递归的方法找子菜单（prentId=children.parentId）
+过滤出父菜单的所有子菜单（filter）
+对每一个子菜单在做查询子菜单的递归操作
+完成之后进行排序，排序的时候防止空指针异常，使用三元运算。
+collect收集结果
+
+
+同样进行排序
+最后collect收集流成一个list返回结果
+
+具体实现在此向操作之前还需要在entity实体类中添加一个属性，children属性存放父标签下子标签。
+12@TableField(exist = false)private List&lt;CategoryEntity&gt; children;
+
+
+ 这里还使用了一个@tableField注解来声明不需要在数据库中保存。
+
+在这个操作中使用了递归的方法实现了多级菜单的分类以及排序操作。
+1234567891011121314151 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2016/01/01/gmall%E6%96%87%E6%A1%A3/%E4%BD%BF%E7%94%A8mybatis%E8%BF%9B%E8%A1%8C%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2/" title="使用mybatis进行分页查询"><img class="post_bg" src="https://images.unsplash.com/photo-1633078141386-eec9b3461294?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=326&amp;q=80" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用mybatis进行分页查询"></a></div><div class="recent-post-info"><a class="article-title" href="/2016/01/01/gmall%E6%96%87%E6%A1%A3/%E4%BD%BF%E7%94%A8mybatis%E8%BF%9B%E8%A1%8C%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2/" title="使用mybatis进行分页查询">使用mybatis进行分页查询</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2022-07-02T08:37:06.282Z" title="更新于 2022-07-02 16:37:06">2022-07-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/LeetCode%E7%A0%B4%E5%B1%80%E6%94%BB%E7%95%A5/">LeetCode破局攻略</a></span></div><div class="content">12345678910111213141516171819public PageUtils queryPage(Map&lt;String, Object&gt; params, Long catelogId) &#123;        if(catelogId==0)&#123;            IPage&lt;AttrGroupEntity&gt; page = this.page(new Query&lt;AttrGroupEntity&gt;().getPage(params),                    new QueryWrapper&lt;AttrGroupEntity&gt;());            return new PageUtils(page);        &#125;//        从参数中获取一个key,key是检索关键字,用户查询的数据        String key=(String) params.get(&quot;key&quot;);//        select * from pms_attr_group ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2016/01/01/gmall%E6%96%87%E6%A1%A3/%E5%89%8D%E7%AB%AF%E5%8A%9F%E8%83%BD%E6%80%BB%E7%BB%93(2)/" title="前端功能总结(2)"><img class="post_bg" src="https://img3.wallspic.com/previews/1/8/7/8/6/168781/168781-lu_jiao-zi_ran_huan_jing-zi_ran_jing_guan-zhi_bei-mu-550x310.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端功能总结(2)"></a></div><div class="recent-post-info"><a class="article-title" href="/2016/01/01/gmall%E6%96%87%E6%A1%A3/%E5%89%8D%E7%AB%AF%E5%8A%9F%E8%83%BD%E6%80%BB%E7%BB%93(2)/" title="前端功能总结(2)">前端功能总结(2)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2022-07-02T08:37:06.296Z" title="更新于 2022-07-02 16:37:06">2022-07-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/LeetCode%E7%A0%B4%E5%B1%80%E6%94%BB%E7%95%A5/">LeetCode破局攻略</a></span></div><div class="content">拖动菜单栏  P54
+逻辑判断‼️
+前端字段校验 p66
+子组件向父组件传递数据p72
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2016/01/01/gmall%E6%96%87%E6%A1%A3/%E5%89%8D%E7%AB%AF%E5%8A%9F%E8%83%BD%E6%80%BB%E7%BB%93/" title="前端功能总结"><img class="post_bg" src="https://images.unsplash.com/photo-1653311918738-0c43e51fb962?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=387&amp;q=80" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端功能总结"></a></div><div class="recent-post-info"><a class="article-title" href="/2016/01/01/gmall%E6%96%87%E6%A1%A3/%E5%89%8D%E7%AB%AF%E5%8A%9F%E8%83%BD%E6%80%BB%E7%BB%93/" title="前端功能总结">前端功能总结</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2022-07-02T08:37:06.319Z" title="更新于 2022-07-02 16:37:06">2022-07-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/LeetCode%E7%A0%B4%E5%B1%80%E6%94%BB%E7%95%A5/">LeetCode破局攻略</a></span></div><div class="content">拖动菜单栏  P54
+逻辑判断‼️
+前端字段校验 p66
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2016/01/01/gmall%E6%96%87%E6%A1%A3/%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%BD%BF%E7%94%A8%E7%9A%84%E5%A5%BD%E5%A4%84/" title="接口和抽象类使用的好处"><img class="post_bg" src="https://images.unsplash.com/photo-1653450283256-a4df3d86ba65?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=386&amp;q=80" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="接口和抽象类使用的好处"></a></div><div class="recent-post-info"><a class="article-title" href="/2016/01/01/gmall%E6%96%87%E6%A1%A3/%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%BD%BF%E7%94%A8%E7%9A%84%E5%A5%BD%E5%A4%84/" title="接口和抽象类使用的好处">接口和抽象类使用的好处</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2022-07-02T08:37:06.337Z" title="更新于 2022-07-02 16:37:06">2022-07-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/LeetCode%E7%A0%B4%E5%B1%80%E6%94%BB%E7%95%A5/">LeetCode破局攻略</a></span></div><div class="content">总结抽象类实现接口，抽象类中可以实现一些接口的方法，然后在具体的实现过程中（使用一个类来继承抽象类的时候），不需要重新写那个被实现的方法，直接重写没有实现的方法，从而实现不用全部实现的效果。
+接下来举例说明首先一个接口
+1234public interface myInt&#123;	void method1();	void method2();&#125;
+
+
+
+12345678910public abstract class abclass implements myInt&#123;	abstact void hah();		#抽象类自己的方法	public void method2()&#123;		System.out.println(&quot;抽象类重写menthods2打印&quot;);	&#125;	static void hah&#123;		System.out.println(&quot;抽象类的方法打印&quot;);	&#125;	&#125;
+
+
+
+
+
+具体实际应用
+1234567891011public class test extends abcla ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2016/01/01/gmall%E6%96%87%E6%A1%A3/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" title="文件上传"><img class="post_bg" src="https://images.unsplash.com/photo-1653311918738-0c43e51fb962?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=387&amp;q=80" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="文件上传"></a></div><div class="recent-post-info"><a class="article-title" href="/2016/01/01/gmall%E6%96%87%E6%A1%A3/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" title="文件上传">文件上传</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time datetime="2022-07-02T08:37:06.363Z" title="更新于 2022-07-02 16:37:06">2022-07-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/LeetCode%E7%A0%B4%E5%B1%80%E6%94%BB%E7%95%A5/">LeetCode破局攻略</a></span></div><div class="content">[Toc]
+基本思路用户请求上传文件，服务器处理这个请求，并且返回一个签名给到用户，用户通过这个签名来访问，文件存储系统，进行上传文件。文件存储系统的账号密码都是保存在自己服务器中的，比较的安全。
+
+实现minio使用指南
+使用一个新的maven项目来存放所有的第三方包。
+加入到父项目项目中（聚合）添加依赖包还需要加入common，minio注意这里使用的是minio的依赖包，这里注意版本号的问题，需要排除okhttp版本
+12345678910111213141516171819202122&lt;dependency&gt;    &lt;groupId&gt;io.minio&lt;/groupId&gt;    &lt;artifactId&gt;minio&lt;/artifactId&gt;    &lt;version&gt;8.4.2&lt;/version&gt;    &lt;exclusions&gt;        &lt;exclusion&gt;            &lt;groupId&gt;com.squareup.okhttp3&lt;/group ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://s2.loli.net/2022/06/23/aNPncJ4rmxAy8SZ.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">wuy</div><div class="author-info__description">吴扬</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/hello-wy"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/hello-wy" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2281137167@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">wuy's Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/06/24/gmall%E6%96%87%E6%A1%A3/mybatis-plus%20%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4/" title="无题"><img src="https://images.unsplash.com/photo-1649133816831-de3d91d25288?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2022/06/24/gmall%E6%96%87%E6%A1%A3/mybatis-plus%20%E9%80%BB%E8%BE%91%E5%88%A0%E9%99%A4/" title="无题">无题</a><time datetime="2022-06-24T07:24:25.446Z" title="发表于 2022-06-24 15:24:25">2022-06-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2016/01/01/hello-world/" title="hello-world"><img src="https://images.unsplash.com/photo-1649133816831-de3d91d25288?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hello-world"/></a><div class="content"><a class="title" href="/2016/01/01/hello-world/" title="hello-world">hello-world</a><time datetime="2016-01-01T11:20:00.000Z" title="发表于 2016-01-01 19:20:00">2016-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2016/01/01/testPost/" title="testPost"><img src="https://images.unsplash.com/photo-1571061614252-b045689850f4?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=387&amp;q=80" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="testPost"/></a><div class="content"><a class="title" href="/2016/01/01/testPost/" title="testPost">testPost</a><time datetime="2016-01-01T11:20:00.000Z" title="发表于 2016-01-01 19:20:00">2016-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2016/01/01/gmall%E6%96%87%E6%A1%A3/JSR303%E6%A0%A1%E9%AA%8C/" title="JSR303校验"><img src="https://img2.wallspic.com/crops/9/1/8/8/6/168819/168819-chao_ji_pao_che-pao_che-lun_tai-che_deng-1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JSR303校验"/></a><div class="content"><a class="title" href="/2016/01/01/gmall%E6%96%87%E6%A1%A3/JSR303%E6%A0%A1%E9%AA%8C/" title="JSR303校验">JSR303校验</a><time datetime="2016-01-01T11:20:00.000Z" title="发表于 2016-01-01 19:20:00">2016-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2016/01/01/gmall%E6%96%87%E6%A1%A3/%E4%B8%89%E7%BA%A7%E8%8F%9C%E5%8D%95/" title="三级菜单"><img src="https://images.unsplash.com/photo-1653046641850-f8d2222ac839?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=387&amp;q=80" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="三级菜单"/></a><div class="content"><a class="title" href="/2016/01/01/gmall%E6%96%87%E6%A1%A3/%E4%B8%89%E7%BA%A7%E8%8F%9C%E5%8D%95/" title="三级菜单">三级菜单</a><time datetime="2016-01-01T11:20:00.000Z" title="发表于 2016-01-01 19:20:00">2016-01-01</time></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="item-headline"><i class="fas fa-comment-dots"></i><span>最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/LeetCode%E7%A0%B4%E5%B1%80%E6%94%BB%E7%95%A5/"><span class="card-category-list-name">LeetCode破局攻略</span><span class="card-category-list-count">14</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/LeetCode/" style="font-size: 1.1em; color: #999">LeetCode</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.1em; color: #999">算法</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2016/01/"><span class="card-archive-list-date">一月 2016</span><span class="card-archive-list-count">14</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">15</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-08-25T10:17:59.297Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://w.wallhaven.cc/full/z8/wallhaven-z8dg9y.png')"><div id="footer-wrap"><div class="copyright">&copy;2022 By wuy</div><div class="footer_custom_text">Hi, welcome to my <a href="">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function subtitleType () {
+  if (true) { 
+    window.typed = new Typed("#subtitle", {
+      strings: ["伟大不只在事业上惊天动地，他时常不声不响地深思熟虑。","克雷洛夫"],
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = '伟大不只在事业上惊天动地，他时常不声不响地深思熟虑。'
+  }
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const findTrueUrl = (array) => {
+    Promise.all(array.map(item =>
+      fetch(item.url).then(resp => resp.json()).then(data => {
+        const urlArray = data.body.match(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/ig)
+        if (data.user.login === 'utterances-bot') {
+          return urlArray.pop()
+        } else {
+          return urlArray.shift()
+        }
+      })
+    )).then(res => {
+        array = array.map((i,index)=> {
+          return {
+            ...i,
+            url: res[index]
+          }
+        })
+
+        saveToLocal.set('github-newest-comments', JSON.stringify(array), 10/(60*24))
+        generateHtml(array)
+    });
+  }
+
+  const getComment = () => {
+    fetch('https://api.github.com/repos/hello-wuy/gitalk-comments/issues/comments?sort=updated&direction=desc&per_page=6&page=1',{
+      "headers": {
+        Accept: 'application/vnd.github.v3.html+json'
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        const githubArray = data.map(item => {
+          return {
+            'avatar': item.user.avatar_url,
+            'content': changeContent(item.body_html),
+            'nick': item.user.login,
+            'url': item.issue_url,
+            'date': item.updated_at,
+            'githubUrl': item.html_url
+          }
+        })
+        findTrueUrl(githubArray)
+      }).catch(e => {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
+      })
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom.innerHTML= result
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('github-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
