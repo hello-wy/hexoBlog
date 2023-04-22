@@ -1,21 +1,15 @@
 ---
 title: python实现验证码识别接口
-comments: true
 copyright: true
 copyright_author: wuy
-copyright_author_href: 'https://xxxxxx.com'
 copyright_info: 此文章版权归wuy所有，如有转载，请注明来自原作者
 date: 2022-08-25 18:50:38
 tags:
-categories: works
-keywords:
-description:
+categories: 
+- python
+- work
 top_img:
 cover:
-toc:
-toc_number:
-toc_style_simple:
-highlight_shrink:
 ---
 
 # 接口文档
