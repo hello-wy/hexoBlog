@@ -72,7 +72,7 @@ katex:
 # --------------------------------------
 
 # Favicon（网站图标）
-favicon: /img/logo.ico
+favicon: /asserts/favicon.ico
 
 # Avatar (头像)
 avatar:
@@ -129,6 +129,8 @@ cover:
     - https://images.unsplash.com/photo-1653311918738-0c43e51fb962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80
     - https://img2.wallspic.com/crops/9/1/8/8/6/168819/168819-chao_ji_pao_che-pao_che-lun_tai-che_deng-1920x1080.jpg
     - https://img3.wallspic.com/previews/1/8/7/8/6/168781/168781-lu_jiao-zi_ran_huan_jing-zi_ran_jing_guan-zhi_bei-mu-550x310.jpg
+    - https://images.unsplash.com/photo-1680961146622-d5c35f205b32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8YWV1NnJMLWo2ZXd8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60
+    - https://images.unsplash.com/photo-1679464872062-f0a7a87e68db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE0fGFldTZyTC1qNmV3fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60
     - https://images.unsplash.com/photo-1653450283256-a4df3d86ba65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
