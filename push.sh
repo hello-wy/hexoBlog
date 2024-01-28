@@ -1,4 +1,3 @@
-time=`date "+%Y-%m-%d"`
 git add .
 git commit -m "push @ $1"
 git pull
