@@ -4,12 +4,83 @@
   
     
     <entry>
-      <title></title>
-      <link href="/hexoBlog/2023/04/22/git/git%E4%B8%8E%E4%BB%A3%E7%90%86%E9%97%AE%E9%A2%98/"/>
-      <url>/hexoBlog/2023/04/22/git/git%E4%B8%8E%E4%BB%A3%E7%90%86%E9%97%AE%E9%A2%98/</url>
+      <title>无异常无法插入数据库</title>
+      <link href="/hexoBlog/2024/01/27/Mybatis/%E6%97%A0%E5%BC%82%E5%B8%B8%E6%97%A0%E6%B3%95%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+      <url>/hexoBlog/2024/01/27/Mybatis/%E6%97%A0%E5%BC%82%E5%B8%B8%E6%97%A0%E6%B3%95%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
       
-        <content type="html"><![CDATA[<h1 id="git与代理问题"><a href="#git与代理问题" class="headerlink" title="git与代理问题"></a>git与代理问题</h1><p>使用代理的时候经常会遇到这样的情况，无法使用命令<code>git push</code>上传到远程代码仓库</p><blockquote><p>原因：git默认不走代理接口</p></blockquote><h2 id="解决：设置代理服务器"><a href="#解决：设置代理服务器" class="headerlink" title="解决：设置代理服务器:"></a>解决：设置代理服务器:</h2><p>第一种方法：在.gitconfig加上</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http.proxy=127.0.0.1:7890</span><br><span class="line">http.sslVerify=false</span><br></pre></td></tr></table></figure><p>第二种方法：直接在命令行敲</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy 127.0.0.1:7890</span><br><span class="line">git config --global http.sslVerify false</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<p>开发中使用Mybatis框架的时候遇到程序没有爆错，但是数据库没有办法插入数据的情况。仔细调试发现数据库中的id为null，所以猜测可能与id有关，去实体类中设置默认的id类型，自动填充。</p><h2 id="实体类ID-自动填充"><a href="#实体类ID-自动填充" class="headerlink" title="实体类ID 自动填充"></a>实体类ID 自动填充</h2><p><img src="/hexoBlog/assets/image-20240127232400531.png" alt="image-20240127232400531"></p><p>设置type属性，其中type参数有如下：</p><p><img src="/hexoBlog/assets/image-20240127232434937.png" alt="image-20240127232434937"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">AUTO(0), 默认自动增加</span><br><span class="line">NONE(1),空</span><br><span class="line">INPUT(2),手动传入id，不会自动生成</span><br><span class="line">ASSIGN_ID(3),使用雪花算法生成id</span><br><span class="line">ASSIGN_UUID(4);使用uuid生成id</span><br></pre></td></tr></table></figure>]]></content>
       
+      
+      <categories>
+          
+          <category> java </category>
+          
+          <category> mybatis </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IOC DI</title>
+      <link href="/hexoBlog/2024/01/27/ssm/IOC%20%20DI/"/>
+      <url>/hexoBlog/2024/01/27/ssm/IOC%20%20DI/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/hexoBlog/assets/image-20240120212907961.png" alt="image-20240120212907961"></p><h2 id="ioc"><a href="#ioc" class="headerlink" title="ioc"></a>ioc</h2><p>​    从上图中可以看出，本来需要通过 new 生成对象 bookDao ，但是使用呢 ioc 之后就不需要了，统一由 ioc 容器管理所有的bean。这样的好处就是解耦，本来可能更改new 的对象，就得重新启动项目，但是有了这个就不需要通过代码展现出来，spring 的 ioc 自动帮我们处理了。</p><p>使用一些注解可以直接声明这个是一个 bean ，比如说： <code>@Controller</code> <code>@Component</code></p><h2 id="DI"><a href="#DI" class="headerlink" title="DI"></a>DI</h2><p>​    在 ioc 容器中已经处理好了 bean 之间的依赖关系，只需要声明了bean，那么就默认的从 ioc 中获取到对应的依赖关系，这个就是DI。</p><p>使用注解 <code>@Autowired</code> 或 <code>@Resource</code>来实现引入 bean 对象</p><h3 id="Autowired-或-Resource区别"><a href="#Autowired-或-Resource区别" class="headerlink" title="@Autowired 或 @Resource区别"></a><code>@Autowired</code> 或 <code>@Resource</code>区别</h3><p>@Autowired ：按类型装配，如果有两个相同的类型的 Mapper（继承同一个类型），那么会爆错，不知道加载哪一个。</p><p>@Resource：按名称装配，名称唯一，所以不会出错，使用时根据 @Mapper（name），name定义名称。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+          <category> ssm </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>整合junit</title>
+      <link href="/hexoBlog/2024/01/27/ssm/%E6%95%B4%E5%90%88junit/"/>
+      <url>/hexoBlog/2024/01/27/ssm/%E6%95%B4%E5%90%88junit/</url>
+      
+        <content type="html"><![CDATA[<h1 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h1><h2 id="引入xml"><a href="#引入xml" class="headerlink" title="引入xml"></a>引入xml</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="测试文件"><a href="#测试文件" class="headerlink" title="测试文件"></a>测试文件</h2><p>ide 添加测试文件快捷键 command + shift + T</p><p>@SpringBootTest 声明测试</p><p><img src="/hexoBlog/assets/image-20240121125233149.png" alt="image-20240121125233149"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+          <category> ssm </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>加载配置文件</title>
+      <link href="/hexoBlog/2024/01/27/ssm/%E5%8A%A0%E8%BD%BD%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/"/>
+      <url>/hexoBlog/2024/01/27/ssm/%E5%8A%A0%E8%BD%BD%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/hexoBlog/assets/image-20240120224129500.png" alt="image-20240120224129500"></p><p><img src="/hexoBlog/../asset/image-20240128110536338.png" alt="image-20240128110536338"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+          <category> ssm </category>
+          
+      </categories>
       
       
     </entry>
@@ -22,6 +93,31 @@
       <url>/hexoBlog/2023/04/22/git/%E5%B8%B8%E7%94%A8git%E5%91%BD%E4%BB%A4/</url>
       
         <content type="html"><![CDATA[<h1 id="强制上传文件"><a href="#强制上传文件" class="headerlink" title="强制上传文件"></a>强制上传文件</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># origin 仓库地址</span></span><br><span class="line"><span class="comment"># 后面是分支名称</span></span><br><span class="line">git push -u origin feature/20220630_commodity -f</span><br></pre></td></tr></table></figure><h1 id="拉取指定分支的文件"><a href="#拉取指定分支的文件" class="headerlink" title="拉取指定分支的文件"></a>拉取指定分支的文件</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin feature/20220630_commodity</span><br></pre></td></tr></table></figure><h1 id="查看本地仓库的文件"><a href="#查看本地仓库的文件" class="headerlink" title="查看本地仓库的文件"></a>查看本地仓库的文件</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git ls-files |grep &lt;文件名称&gt;</span><br></pre></td></tr></table></figure><h1 id="查看所有的分支"><a href="#查看所有的分支" class="headerlink" title="查看所有的分支"></a>查看所有的分支</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">git branch -a</span><br><span class="line"></span><br><span class="line">==============</span><br><span class="line">  a</span><br><span class="line">  feature/20220630_commodity</span><br><span class="line">  master</span><br><span class="line">  remotes/origin/HEAD -&gt; origin/master</span><br><span class="line">  remotes/origin/dev</span><br><span class="line">  remotes/origin/feature/20220630_commodity</span><br><span class="line">  remotes/origin/master</span><br></pre></td></tr></table></figure><p>远程仓库都是含有 remotes。</p><h1 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout remotes/origin/feature/20220630_commodity</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>常用的git命令</title>
+      <link href="/hexoBlog/2023/04/22/git/git%E4%B8%8E%E4%BB%A3%E7%90%86%E9%97%AE%E9%A2%98/"/>
+      <url>/hexoBlog/2023/04/22/git/git%E4%B8%8E%E4%BB%A3%E7%90%86%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<h1 id="git与代理问题"><a href="#git与代理问题" class="headerlink" title="git与代理问题"></a>git与代理问题</h1><p>使用代理的时候经常会遇到这样的情况，无法使用命令<code>git push</code>上传到远程代码仓库</p><blockquote><p>原因：git默认不走代理接口</p></blockquote><h2 id="解决：设置代理服务器"><a href="#解决：设置代理服务器" class="headerlink" title="解决：设置代理服务器:"></a>解决：设置代理服务器:</h2><p>第一种方法：在.gitconfig加上</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http.proxy=127.0.0.1:7890</span><br><span class="line">http.sslVerify=false</span><br></pre></td></tr></table></figure><p>第二种方法：直接在命令行敲</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy 127.0.0.1:7890</span><br><span class="line">git config --global http.sslVerify false</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -69,21 +165,25 @@
     
     
     <entry>
-      <title>Hello World</title>
-      <link href="/hexoBlog/2022/08/25/hello-world/"/>
-      <url>/hexoBlog/2022/08/25/hello-world/</url>
+      <title>git多账号管理</title>
+      <link href="/hexoBlog/2023/01/01/git/git%E5%A4%9A%E8%B4%A6%E5%8F%B7%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
+      <url>/hexoBlog/2023/01/01/git/git%E5%A4%9A%E8%B4%A6%E5%8F%B7%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="git多账号管理"><a href="#git多账号管理" class="headerlink" title="git多账号管理"></a>git多账号管理</h1><h2 id="清空默认账号"><a href="#清空默认账号" class="headerlink" title="清空默认账号"></a>清空默认账号</h2><p>首先在管理账号的时候确保电脑的 git 未配置全局 git 账号。若配置了全局账号则按照如下操作进行清空默认的账号:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> user.name</span><br><span class="line">git config --global --<span class="built_in">unset</span> user.email</span><br></pre></td></tr></table></figure><h2 id="生成-ssh-key"><a href="#生成-ssh-key" class="headerlink" title="生成 ssh-key"></a>生成 ssh-key</h2><p>现在需要在自己使用的电脑上生成一个 ssh-key </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t id_ras_github -C <span class="string">&quot;xxx@xx.com&quot;</span></span><br></pre></td></tr></table></figure><p>会在 <code>~/.ssh</code> 目录下生成两个文件，一个是<code>XX.pub</code>存放公钥的文件，另一个是私钥的文件。</p><h2 id="将-ssh-key-分别添加到-ssh-agent-信任列表"><a href="#将-ssh-key-分别添加到-ssh-agent-信任列表" class="headerlink" title="将 ssh-key 分别添加到 ssh-agent 信任列表"></a>将 <code>ssh-key</code> 分别添加到 <code>ssh-agent</code> 信任列表</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ~/.ssh/id_ras_github</span><br></pre></td></tr></table></figure><h2 id="config-文件中配置多个-ssh-key"><a href="#config-文件中配置多个-ssh-key" class="headerlink" title="config 文件中配置多个 ssh-key"></a>config 文件中配置多个 ssh-key</h2>]]></content>
       
       
       <categories>
           
-          <category> python </category>
-          
-          <category> work </category>
+          <category> git </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
       
     </entry>
     
@@ -105,35 +205,6 @@
           
       </categories>
       
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>从0开始搭建自己的网站(一)</title>
-      <link href="/hexoBlog/2022/06/25/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%AB%99-%E4%B8%80/"/>
-      <url>/hexoBlog/2022/06/25/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/%E4%BB%8E0%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%AB%99-%E4%B8%80/</url>
-      
-        <content type="html"><![CDATA[<h1 id="网站的初始化"><a href="#网站的初始化" class="headerlink" title="网站的初始化"></a>网站的初始化</h1><p>创建一个 html 文件,css 文件,js 文件</p><h1 id="网站-header-部分-导航栏部分"><a href="#网站-header-部分-导航栏部分" class="headerlink" title="网站 header 部分(导航栏部分)"></a>网站 header 部分(导航栏部分)</h1><h1 id="部署构建并且上传到-github-上面"><a href="#部署构建并且上传到-github-上面" class="headerlink" title="部署构建并且上传到 github 上面"></a>部署构建并且上传到 github 上面</h1><p>命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> 个人网站 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> html </tag>
-            
-            <tag> 前端 </tag>
-            
-            <tag> css </tag>
-            
-        </tags>
       
     </entry>
     
