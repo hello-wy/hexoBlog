@@ -7,3 +7,4 @@
 但是hexo部署读取的目录在 source/assests 目录下的图片
 
 使用 git hooks 实现，在 commit 的时候将改变的图片移动到 source/assets 目录下
+ 
